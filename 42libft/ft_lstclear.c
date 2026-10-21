@@ -6,9 +6,11 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 19:50:18 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/21 20:03:57 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/21 20:06:47 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
