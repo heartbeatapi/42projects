@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 17:02:43 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/20 17:46:01 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/21 11:45:41 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ char			**ft_split(char const *s, char c);
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 unsigned int	ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
 #endif
