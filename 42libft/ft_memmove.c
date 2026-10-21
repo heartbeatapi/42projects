@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 12:18:33 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/21 12:17:04 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/21 12:21:09 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned const char	*s;
 	size_t				i;
 
-	if (n == 0)
-		return (dest);
 	d = (unsigned char *) dest;
 	s = (unsigned const char *) src;
 	i = 0;
