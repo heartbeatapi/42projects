@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 11:34:12 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 11:56:17 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 18:29:35 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
-	printf("%s", (unsigned const char *) ft_memchr("Hello Schmello", 'x', 7));
+	printf("%s%s\n", "ft_memchr output: ",
+	 (unsigned const char *) ft_memchr("Adam Smasher", 'o', 7));
+	printf("%s%s\n", "man_memchr output: ",
+	 (unsigned const char *) memchr("Adam Smasher", 'o', 7));
 	return (0);
 }*/

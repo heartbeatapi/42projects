@@ -6,11 +6,13 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 11:35:16 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/08 16:53:28 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:27:39 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stddef.h>
+//#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -41,6 +43,9 @@ int	ft_atoi(const char *nptr)
 
 int	main()
 {
-	printf("%d", ft_atoi("+1   dasdagaejh 	++2853~d213bcr"));
+	printf("%s%d\n", "positive ft_atoi output: ", ft_atoi("1523xad"));
+	printf("%s%d\n", "negative ft_atoi output: ", ft_atoi("-1523xad"));
+	printf("%s%d\n", "positive man_atoi output: ", atoi("1523xad"));
+	printf("%s%d\n", "negative man_atoi output: ", atoi("-1523xad"));
 	return (0);
 }*/

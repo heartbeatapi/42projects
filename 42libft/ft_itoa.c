@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 12:10:16 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/08 16:56:22 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:51:44 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,3 +99,12 @@ char	*ft_itoa(int n)
 	dest[i] = '\0';
 	return (ft_strrev(dest));
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%s%s\n", "itoa output: ", ft_itoa(-123156));
+	printf("%s%s\n", "itoa INT_MIN output: ", ft_itoa(-2147483648));
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 11:03:14 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 11:21:57 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 18:29:28 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
-	printf("%d", ft_memcmp("hello houseman", "hello ~reeman", 20));
+	printf("%s%d\n", "ft_memcmp output: ", 
+	ft_memcmp("hello houseman", "hello houseman", 20));
+	printf("%s%d\n", "man_memcmp output: ", 
+	memcmp("hello houseman", "hello houseman", 20));
 	return (0);
 }*/

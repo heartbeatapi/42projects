@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 09:45:50 by davatanz          #+#    #+#             */
-/*   Updated: 2026/09/30 12:36:15 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:41:55 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ int	ft_isalnum(int c)
 }
 
 /*#include <stdio.h>
+#include <ctype.h>
 
 int	main()
 {
-	printf("%d", ft_isalnum('~'));
+	printf("%s%d\n", "ft_isalnum output: ", ft_isalnum('A'));
+	printf("%s%d\n", "man_isalnum output: ", isalnum('A'));
 	return (0);
 }*/

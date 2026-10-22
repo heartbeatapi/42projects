@@ -6,13 +6,14 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 17:56:42 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 12:21:27 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:37:50 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdint.h>
 #include <stdlib.h>
+//#include <strings.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -34,7 +35,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 int	main()
 {
 	int	*arr = ft_calloc(5, sizeof(int));
+	int	*arr2 = calloc(5, sizeof(int));
 	
-	printf("%d", arr[3]);
+	printf("%s%d\n", "ft_calloc output: ", arr[3]);
+	printf("%s%d\n", "man_calloc output: ", arr2[3]);
 	return (0);
 }*/

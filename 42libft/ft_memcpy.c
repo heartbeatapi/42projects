@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:25:40 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/21 12:20:32 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/22 18:29:21 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
 	unsigned const char src[20] = "hello ";
 	unsigned char		dest[20] = "Reaver";
 
-	printf("%s", (unsigned char *) ft_memcpy(dest, src, 4));
+	printf("%s%s\n", "ft_memcpy output: ", 
+	(unsigned char *) ft_memcpy(dest, src, 4));
+	printf("%s%s\n", "man_memcpy output: ", 
+	(unsigned char *) memcpy(dest, src, 4));
 	return (0);
 }*/
