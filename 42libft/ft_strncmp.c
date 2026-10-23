@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 12:49:04 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 12:57:19 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:33:15 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
-	printf("%d", ft_strncmp("hello", "hel1o2323", 10));
+	printf("%s%d\n", "ft_strncmp output: ",
+	 ft_strncmp("hello", "hel1o2323", 10));
+	printf("%s%d\n", "man_strncmp output: ",
+	 strncmp("hello", "hello2323", 10));
 	return (0);
 }*/

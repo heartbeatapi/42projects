@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 11:25:59 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/10 11:44:43 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:31:02 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	d[i] = '\0';
 	return (d);
 }
+
+/*#include <stdio.h>
+
+char	ft_func(unsigned int i, char c)
+{
+	return (c - 32);
+}
+
+int	main(void)
+{
+	char	*s = "hello world";
+	char	*d;
+
+	printf("before: %s\n", s);
+	d = ft_strmapi(s, ft_func);
+	printf("after:  %s\n", d);
+	return (0);
+}*/

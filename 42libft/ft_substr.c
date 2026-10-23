@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 15:27:08 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/19 19:13:33 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:18:08 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%s", ft_substr("Two Bandits", 3, 8));
+	return (0);
+}*/

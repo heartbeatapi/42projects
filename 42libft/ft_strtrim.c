@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 16:48:23 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/19 12:11:21 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:19:20 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, (end - start)));
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%s", ft_strtrim("xaaradaSU-35xadr", "xard"));
+	return (0);
+}*/

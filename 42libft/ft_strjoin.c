@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 15:51:56 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 16:32:12 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:28:15 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i] = '\0';
 	return (dest);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%s", ft_strjoin("Sala", "mander"));
+	return (0);
+}*/

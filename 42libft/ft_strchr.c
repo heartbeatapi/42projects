@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 12:27:25 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/05 12:43:11 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:20:56 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ char	*ft_strchr(const char *s, int c)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
-	printf("%p", ft_strchr("Hello", '\0'));
+	printf("%s%p\n", "ft_strchr output: ", ft_strchr("Hello", '\0'));
+	printf("%s%p\n", "man_strchr output: ", strchr("Hello", '\0'));
 	return (0);		
 }*/

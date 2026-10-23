@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 11:51:05 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/08 12:16:44 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:29:39 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 }
 
 /*#include <stdio.h>
+#include <string.h>
 
 int	main()
 {
 	char dst[20] = "Hello Houseman";
 	
- 	printf("%d", (int) ft_strlcpy(dst, "Houseman", 10));
+ 	printf("%s%d\n", "ft_strlcpy output: ",
+	 (int) ft_strlcpy(dst, "Houseman", 10));
+	printf("%s%d\n"), "man_strlcpy output: ",
+	 (int) strcpy(dst, "Houseman", 10));
 	return (0);
 }*/

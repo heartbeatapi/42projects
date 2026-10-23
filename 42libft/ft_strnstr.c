@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 11:57:07 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/10 12:25:50 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:35:07 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+/*#include <stdio.h>
+#include <string.h>
+
+int	main()
+{
+	printf("%s%s\n", "ft_strnstr output: ",
+		 ft_strnstr("CAT MEOW CAT MEOWMEOW", "MEOW", 10));
+	printf("%s%s\n", "man_strnstr output: ",
+		 strnstr("CAT MEOW CAT MEOWMEOW", "MEOW", 10));
+	return (0);
+}*/
