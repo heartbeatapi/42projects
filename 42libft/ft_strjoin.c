@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 15:51:56 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/23 09:28:15 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 20:34:08 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	j = 0;
 	while (j < ft_strlen(s2))
-		dest[i++] = s2[j++];
+	{
+		dest[i] = s2[j];
+		i++;
+		j++;
+	}
 	dest[i] = '\0';
 	return (dest);
 }
