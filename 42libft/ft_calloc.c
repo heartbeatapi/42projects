@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 17:56:42 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/23 09:44:16 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 15:11:27 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*nullstr;
 
 	if (nmemb == 0 || size == 0)
-		return (malloc(0));
+		return (malloc(1));
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	nullstr = malloc(nmemb * size);
