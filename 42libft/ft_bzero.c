@@ -6,12 +6,11 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:16:23 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/22 16:34:01 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/23 09:45:54 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
