@@ -1,6 +1,6 @@
 # Libft
 
-This project has been created as part of the 42 core curriculum by davatanz.
+*This project has been created as part of the 42 core curriculum by davatanz.*
 
 ## Description
 

@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 15:47:54 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/25 08:35:58 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/25 13:24:28 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 /*#include <stdio.h>
 #include <stdlib.h>
 
-void	*ft_42(void *content)
+void	*ft_function(void *content)
 {
 	int	*numnum;
 
@@ -106,27 +106,25 @@ int	main(void)
 	if (node == NULL)
 		return (free(n3), free(n4), ft_lstclear(&lst, ft_del), 1);
 	ft_lstadd_back(&lst, node);
-	printf("Original list:\n");
+	printf("old list:\n");
 	ft_lstiter(lst, ft_print);
-	printf("List size: %d\n", ft_lstsize(lst));
+	printf("size: %d\n", ft_lstsize(lst));
 	last = ft_lstlast(lst);
 	if (last != NULL)
-		printf("Last element: %d\n", *(int *)last->content);
+		printf("last node: %d\n", *(int *)(*last).content);
 	node = ft_lstnew(n4);
 	if (node == NULL)
 		return (free(n4), ft_lstclear(&lst, ft_del), 1);
-	printf("Deleting node containing: %d\n", *(int *)node->content);
 	ft_lstdelone(node, ft_del);
-	mapped = ft_lstmap(lst, ft_42, ft_del);
+	mapped = ft_lstmap(lst, ft_function, ft_del);
 	if (mapped == NULL)
 	{
 		ft_lstclear(&lst, ft_del);
 		return (1);
 	}
-	printf("Mapped list:\n");
+	printf("new list:\n");
 	ft_lstiter(mapped, ft_print);
 	ft_lstclear(&lst, ft_del);
 	ft_lstclear(&mapped, ft_del);
-	printf("Lists cleared.\n");
 	return (0);
 }*/
