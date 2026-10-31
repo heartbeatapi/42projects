@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 22:10:44 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 22:18:11 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,5 +243,8 @@ int	main()
 	printf("\n");
 	printf("total chars: %d\n",
 		ft_printf("Base 16 of %d = %X.\n", -300, -300));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("Ich mag Nugg%uts.\n", 3));
 	return (0);
 }
