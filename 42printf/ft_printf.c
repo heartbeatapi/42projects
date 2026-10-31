@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 18:18:12 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:27:55 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,6 +201,6 @@ int	main()
 		ft_printf("The address of the string %s is %p.\n", "Foxhound", "Foxhound"));
 	printf("\n");
 	printf("total chars: %d\n",
-		ft_printf("The engine starts to %s at %s 110%% thrust.\n", "overheat", "Wartime Emergency Power"));
+		ft_printf("The engine starts to %s at a constant %u%% thrust.\n", "overheat", 100));
 	return (0);
 }
