@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 22:18:11 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 22:20:57 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -239,12 +239,14 @@ int	main()
 		ft_printf("The engine starts to %s at a constant %u%% thrust.\n", "overheat", 100));
 	printf("\n");
 	printf("total chars: %d\n",
-		ft_printf("Base 16 of %d = %x.\n", -300, -300));
+		ft_printf("Base 16 of %d = %x.\n", -1, -1));
 	printf("\n");
 	printf("total chars: %d\n",
-		ft_printf("Base 16 of %d = %X.\n", -300, -300));
+		ft_printf("Base 16 of %d = %X.\n", -1, -1));
 	printf("\n");
 	printf("total chars: %d\n",
 		ft_printf("Ich mag Nugg%uts.\n", 3));
+	printf("total chars: %d\n",
+			ft_printf(""));
 	return (0);
 }
