@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 18:02:54 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 18:18:12 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,10 +134,6 @@ int	ft_printvoidptr(va_list arg)
 	return (ft_putunsignnbr(add) + 2);
 }
 
-int	ft_printlowbase(va_list arg);
-{
-}
-
 //IDENTIFYING FORMAT SPECIFIER:
 int	ft_format_specifier(const char *s, va_list arg, size_t i)
 {
@@ -156,8 +152,6 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 	}
 	if (s[i] == 'p')
 		return (ft_printvoidptr(arg));
-	if (s[i] == 'x')
-		return (ft_printlowbase(arg));
 	return (0);
 }
 
@@ -205,5 +199,8 @@ int	main()
 	printf("\n");
 	printf("total chars: %d\n",
 		ft_printf("The address of the string %s is %p.\n", "Foxhound", "Foxhound"));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("The engine starts to %s at %s 110%% thrust.\n", "overheat", "Wartime Emergency Power"));
 	return (0);
 }
