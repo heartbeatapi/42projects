@@ -6,13 +6,14 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 15:25:32 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 15:50:12 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdint.h>
 #include "ft_printf.h"
 
 //CHARACTER PRINT:
@@ -56,8 +57,6 @@ static int	ft_nbrlen(long long num)
 	track = 1;
 	while (num >= 10)
 	{
-		if (num < 10)
-			return (track);
 		num = num / 10;
 		track++;
 	}
@@ -98,8 +97,6 @@ static int	ft_nbrunsignlen(unsigned int num)
 	track = 1;
 	while (num >= 10)
 	{
-		if (num < 10)
-			return (track);
 		num = num / 10;
 		track++;
 	}
@@ -125,6 +122,12 @@ int	ft_printunsignint(va_list arg)
 
 	num = (unsigned int)va_arg(arg, unsigned int);
 	return (ft_putunsignnbr(num));
+}
+
+//UNSIGNED INTEGER ADDRESS:
+int	ft_printvoidptr(va_list arg)
+{
+	long long add;
 }
 
 //IDENTIFYING FORMAT SPECIFIER:
