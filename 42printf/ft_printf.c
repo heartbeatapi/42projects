@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 15:50:12 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 16:45:31 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,10 @@ int	ft_printunsignint(va_list arg)
 int	ft_printvoidptr(va_list arg)
 {
 	long long add;
+
+	add = (uintptr_t)va_arg(arg, unsigned int);
+	write(1, "0x", 2);
+	return (ft_putunsignnbr(add) + 2);
 }
 
 //IDENTIFYING FORMAT SPECIFIER:
@@ -143,7 +147,7 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 		return (ft_printunsignint(arg));
 	if (s[i] == '%')
 	{
-		write(1, &'%', 1);
+		write(1, "%%", 1);
 		return (1);
 	}
 	if (s[i] == 'p')
@@ -183,16 +187,16 @@ int	ft_printf(const char *s, ...)
 
 int	main()
 {
-printf("total chars: %d\n",
-ft_printf("The Soviet %s%d %s was the fastest operational %s of all time.
-It's top speed was %s%d,%d which translates to roughly %d km/h.\n",
-"MiG-", 25, "Foxbat", "Interceptor", "Mach ", 2, 83, 3000));
-printf("total chars: %d\n",
-ft_printf("The %s is the newest Generation %d MBT of %s.\n",
-"Leopard 2A8", 3, "Germany."));
-printf("\n");
-printf("total chars: %d\n",
-ft_printf("The %s T-%u MBT, has a gun depression of %d degrees.\n",
-"Russian", 80, -5));
-return (0);
+	printf("total chars: %d\n", 
+		ft_printf("The Soviet %s%d %s was the fastest operational %s of all time. It's top speed was %s%d,%d which translates to roughly %d km/h.\n", "MiG-", 25, "Foxbat", "Interceptor", "Mach ", 2, 83, 3000));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("The %s is the newest Generation %d MBT from %s.\n", "Leopard 2A8", 3, "Germany"));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("The %s T-%u MBT, has a gun depression of %d degrees.\n", "Russian", 80, -5));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("The address of the string %s is %p.\n", "Foxhound", "Foxhound"));
+	return (0);
 }
