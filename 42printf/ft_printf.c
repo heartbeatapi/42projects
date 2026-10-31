@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 19:14:30 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 22:10:44 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,19 +118,13 @@ int	ft_baselen(const char *base)
 }
 
 //PUTNBRLOW CONVERSION:
-int	ft_convputbaselow(long long num, const char *base)
+int	ft_convputbaselow(unsigned int num, const char *base)
 {
 	int		len;
 	int		count;
 
 	count = 0;
 	len = ft_baselen(base);
-	if (num < 0)
-	{
-		write(1, "-", 1);
-		num = -num;
-		count++;
-	}
 	if (num >= len)
 		count += ft_convputbaselow(num / len, base);
 	write(1, &base[num % len], 1);
@@ -143,8 +137,32 @@ int	ft_putbaselow(va_list arg)
 {
 	long long	num;
 
-	num = va_arg(arg, int);
+	num = va_arg(arg, unsigned int);
 	return (ft_convputbaselow(num, "0123456789abcdef"));
+}
+
+//PUTNBRUPPER CONVERSION:
+int	ft_convputbaseupper(unsigned int num, const char *base)
+{
+	int	len;
+	int	count;
+
+	count = 0;
+	len = ft_baselen(base);
+	if (num >= len)
+		count += ft_convputbaseupper(num / len, base);
+	write(1, &base[num % len], 1);
+	count++;
+	return (count);
+}
+
+//UPPERCASE BASE:
+int	ft_putbaseupper(va_list arg)
+{
+	long long	num;
+
+	num = va_arg(arg, unsigned int);
+	return (ft_convputbaseupper(num, "0123456789ABCDEF"));
 }
 
 //IDENTIFYING FORMAT SPECIFIER:
@@ -167,6 +185,8 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 		return (ft_printvoidptr(arg));
 	if (s[i] == 'x')
 		return (ft_putbaselow(arg));
+	if (s[i] == 'X')
+		return (ft_putbaseupper(arg));
 	return (0);
 }
 
@@ -219,6 +239,9 @@ int	main()
 		ft_printf("The engine starts to %s at a constant %u%% thrust.\n", "overheat", 100));
 	printf("\n");
 	printf("total chars: %d\n",
-		ft_printf("Base 16 of %d = %x\n", 300, 300));
+		ft_printf("Base 16 of %d = %x.\n", -300, -300));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("Base 16 of %d = %X.\n", -300, -300));
 	return (0);
 }
