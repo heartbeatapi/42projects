@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 18:27:55 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/10/31 19:14:30 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,28 +47,11 @@ int ft_printstr(va_list arg)
 	return (i);
 }
 
-//LENGTH OF INTEGER:
-static int	ft_nbrlen(long long num)
-{
-	int	track;
-
-	if (num < 0)
-		num = -num;
-	track = 1;
-	while (num >= 10)
-	{
-		num = num / 10;
-		track++;
-	}
-	return (track);
-}
 //INTEGER PRINT:
 static int	ft_putnbr(long long num)
 {
 	int	count;
-	int	track;
 
-	track = ft_nbrlen(num);
 	count = 0;
 	if (num < 0)
 	{
@@ -77,9 +60,10 @@ static int	ft_putnbr(long long num)
 		count++;
 	}
 	if (num >= 10)
-		ft_putnbr(num / 10);
+		count += ft_putnbr(num / 10);
 	write(1, &"0123456789"[num % 10], 1);
-	return (count + track);
+	count++;
+	return (count);
 }
 //INTEGER PRINT CALL:
 int	ft_printint(va_list arg)
@@ -90,29 +74,17 @@ int	ft_printint(va_list arg)
 	return (ft_putnbr(num));
 }
 
-static int	ft_nbrunsignlen(unsigned int num)
-{
-	int	track;
-
-	track = 1;
-	while (num >= 10)
-	{
-		num = num / 10;
-		track++;
-	}
-	return (track);
-}
-
 //UNSIGNED INTEGER PRINT:
 static int ft_putunsignnbr(unsigned int num)
 {
-	int	track;
-	
-	track = ft_nbrunsignlen(num);
+	int	count;
+
+	count = 0;
 	if (num >= 10)
-		ft_putunsignnbr(num / 10);
+		count += ft_putunsignnbr(num / 10);
 	write (1, &"0123456789"[num % 10], 1);
-	return (track);
+	count++;
+	return (count);
 }
 
 //UNSIGNED INTEGER PRINT CALL:
@@ -134,6 +106,47 @@ int	ft_printvoidptr(va_list arg)
 	return (ft_putunsignnbr(add) + 2);
 }
 
+//LENGTH OF BASE
+int	ft_baselen(const char *base)
+{
+	int	i;
+
+	i = 0;
+	while (base[i] != '\0')
+		i++;
+	return (i);
+}
+
+//PUTNBRLOW CONVERSION:
+int	ft_convputbaselow(long long num, const char *base)
+{
+	int		len;
+	int		count;
+
+	count = 0;
+	len = ft_baselen(base);
+	if (num < 0)
+	{
+		write(1, "-", 1);
+		num = -num;
+		count++;
+	}
+	if (num >= len)
+		count += ft_convputbaselow(num / len, base);
+	write(1, &base[num % len], 1);
+	count++;
+	return (count);
+}
+
+//LOWERCASE BASE:
+int	ft_putbaselow(va_list arg)
+{
+	long long	num;
+
+	num = va_arg(arg, int);
+	return (ft_convputbaselow(num, "0123456789abcdef"));
+}
+
 //IDENTIFYING FORMAT SPECIFIER:
 int	ft_format_specifier(const char *s, va_list arg, size_t i)
 {
@@ -152,6 +165,8 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 	}
 	if (s[i] == 'p')
 		return (ft_printvoidptr(arg));
+	if (s[i] == 'x')
+		return (ft_putbaselow(arg));
 	return (0);
 }
 
@@ -202,5 +217,8 @@ int	main()
 	printf("\n");
 	printf("total chars: %d\n",
 		ft_printf("The engine starts to %s at a constant %u%% thrust.\n", "overheat", 100));
+	printf("\n");
+	printf("total chars: %d\n",
+		ft_printf("Base 16 of %d = %x\n", 300, 300));
 	return (0);
 }
