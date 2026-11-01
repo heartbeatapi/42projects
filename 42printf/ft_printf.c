@@ -6,11 +6,11 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 22:20:57 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/01 14:57:27 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+/*#include <stddef.h>
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdint.h>
@@ -125,7 +125,7 @@ int	ft_convputbaselow(unsigned int num, const char *base)
 
 	count = 0;
 	len = ft_baselen(base);
-	if (num >= len)
+	if (num >= (unsigned int) len)
 		count += ft_convputbaselow(num / len, base);
 	write(1, &base[num % len], 1);
 	count++;
@@ -149,7 +149,7 @@ int	ft_convputbaseupper(unsigned int num, const char *base)
 
 	count = 0;
 	len = ft_baselen(base);
-	if (num >= len)
+	if (num >=  (unsigned int) len)
 		count += ft_convputbaseupper(num / len, base);
 	write(1, &base[num % len], 1);
 	count++;
@@ -188,7 +188,10 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 	if (s[i] == 'X')
 		return (ft_putbaseupper(arg));
 	return (0);
-}
+}*/
+
+#include "ft_printf.h"
+#include <unistd.h>
 
 //FINDING FORMAT SPECIFIER, OTHERWISE PRINT IMMUTABLE STRING:
 int	ft_printf(const char *s, ...)
@@ -218,8 +221,23 @@ int	ft_printf(const char *s, ...)
 	return (count);
 }
 
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("PUTCHAR TESTS:\n\n");
+	printf("\ntotal chars: %d\n",
+		ft_printf("%c", 'M'));
+	printf("\ntotal chars: %d\n",
+		ft_printf("%c", 0));
+	printf("\ntotal chars: %d\n",
+		ft_printf("%c", ' '));
+	printf("\ntotal chars: %d\n",
+		ft_printf("%c", 127));
+}*/
+
 //TEST MAIN:
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
@@ -233,7 +251,7 @@ int	main()
 		ft_printf("The %s T-%u MBT, has a gun depression of %d degrees.\n", "Russian", 80, -5));
 	printf("\n");
 	printf("total chars: %d\n",
-		ft_printf("The address of the string %s is %p.\n", "Foxhound", "Foxhound"));
+		printf("The address of the string %s is %p.\n", "Foxhound", "Foxhound"));
 	printf("\n");
 	printf("total chars: %d\n",
 		ft_printf("The engine starts to %s at a constant %u%% thrust.\n", "overheat", 100));
@@ -247,6 +265,6 @@ int	main()
 	printf("total chars: %d\n",
 		ft_printf("Ich mag Nugg%uts.\n", 3));
 	printf("total chars: %d\n",
-			ft_printf(""));
+			printf("%d\n", 20));
 	return (0);
-}
+}*/

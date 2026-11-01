@@ -5,14 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/31 11:50:29 by davatanz          #+#    #+#             */
-/*   Updated: 2026/10/31 21:51:58 by davatanz         ###   ########.fr       */
+/*   Created: 2026/11/01 14:52:57 by davatanz          #+#    #+#             */
+/*   Updated: 2026/11/01 14:54:33 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# include <stdarg.h>
+# include <stddef.h>
 
 int	ft_printf(const char *s, ...);
+int	ft_format_specifier(const char *s, va_list arg, size_t i);
+int	ft_putchar(va_list arg);
 
 #endif
