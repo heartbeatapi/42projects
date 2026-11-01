@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 19:03:31 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 19:55:02 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/01 21:57:41 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,5 @@ int	ft_putnbr(va_list arg)
 	long long	num;
 
 	num = va_arg(arg, int);
-	if (INT_MIN < num || num > INT_MAX)
-	{
-		write(1, "invalid input", 13);
-		return (-1);
-	}
 	return (ft_print(num));
 }
