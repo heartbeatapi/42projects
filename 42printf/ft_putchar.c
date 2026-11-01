@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 14:16:54 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 14:55:14 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/01 17:35:42 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_putchar(va_list arg)
 	char	c;
 
 	c = va_arg(arg, int);
-	write(1, &c, 1);
+	if (write(1, &c, 1) == -1)
+		return (-1);
 	return (1);
 }

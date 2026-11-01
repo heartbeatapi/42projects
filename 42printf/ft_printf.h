@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 14:52:57 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 14:54:33 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/01 19:33:58 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 # include <stddef.h>
 
 int	ft_printf(const char *s, ...);
-int	ft_format_specifier(const char *s, va_list arg, size_t i);
+int	ft_format_specifier(const char *s, va_list arg, long long i);
 int	ft_putchar(va_list arg);
+int	ft_putstr(va_list arg);
+int	ft_putadd(va_list arg);
+int	ft_putnbr(va_list arg);
 
 #endif
