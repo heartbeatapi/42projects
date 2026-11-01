@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 17:43:28 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 18:51:59 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/01 19:58:07 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_putadd(va_list arg)
 {
 	unsigned long long	add;
 	long long			temp;
-	
+
 	add = (uintptr_t)va_arg(arg, void *);
 	if (write(1, "0x", 2) == -1)
 		return (-1);
