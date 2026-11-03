@@ -8,7 +8,7 @@ ARFLAG = -r -c -s
 
 SRC = ft_printf.c ft_putchar.c ft_formatcheck.c \
 		ft_putstr.c ft_putadd.c ft_putnbr.c \
-		ft_putunsign.c ft_puthexlower.c
+		ft_putunsign.c ft_puthexlower.c ft_puthexupper.c
 OBJ = ${SRC:.c=.o}
 
 DEP = ${SRC:.c=.d}

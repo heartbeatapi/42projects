@@ -81,5 +81,27 @@ int	main()
 		ft_printf("%x", 255));
 	printf("\nlibc printf puthexlower & total chars: %d\n\n",
 		printf("%x", 300));
+
+	printf("\n=====PUTHEXUPPER TESTS=====\n\n");
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%X", -1));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%X", UINT_MAX));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%X", 42));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%X", 255));
+	printf("\nlibc printf puthexlower & total chars: %d\n\n",
+		printf("%X", 300));
+
+	printf("\n=====PUTPERCENT TESTS=====\n\n");
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%%"));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%%%%"));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%%%%%%"));
+	printf("\nlibc printf putpercent & total chars: %d\n\n",
+		printf("%%%%%%"));
 	return (0);
 }
