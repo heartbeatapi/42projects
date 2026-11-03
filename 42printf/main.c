@@ -69,5 +69,17 @@ int	main()
 		ft_printf("%u", 0));
 	printf("\nlibc printf putunsign & total chars: %d\n\n",
 		printf("%u", -1));
+
+	printf("\n=====PUTHEXLOWER TESTS=====\n\n");
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%x", -1));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%x", UINT_MAX));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%x", 42));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%x", 255));
+	printf("\nlibc printf puthexlower & total chars: %d\n\n",
+		printf("%x", 300));
 	return (0);
 }

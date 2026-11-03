@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:58:05 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/03 11:15:11 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/03 11:33:23 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int	ft_format_specifier(const char *s, va_list arg, long long i)
 		return (ft_putnbr(arg));
 	if (s[i] == 'u')
 		return (ft_putunsign(arg));
+	if (s[i] == 'x')
+		return (ft_puthexlower(arg));
 	return (0);
 }
