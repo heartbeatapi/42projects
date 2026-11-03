@@ -57,5 +57,17 @@ int	main()
 		ft_printf("%d", -2263525235248));
 	printf("\nlibc printf putnbr & total chars: %d\n\n",
 		printf("%d", INT_MIN));
+	
+	printf("\n=====PUTUNBR TESTS=====\n\n");
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%u", 10));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%u", INT_MAX));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%u", -1));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%u", 0));
+	printf("\nlibc printf putunsign & total chars: %d\n\n",
+		printf("%u", -1));
 	return (0);
 }
