@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:58:05 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/03 12:10:51 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/04 12:00:04 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_format_specifier(const char *s, va_list arg, long long i)
 		return (ft_puthexupper(arg));
 	if (s[i] == '%')
 	{
-		if (write(1, "%%", 1) == -1)
+		if (write(1, "%", 1) == -1)
 			return (-1);
 		return (1);
 	}
