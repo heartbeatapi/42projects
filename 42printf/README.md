@@ -20,7 +20,7 @@ It includes the following conversions:
 
 **Algorithm**
 
-It writes until the next `%` or `\0`. Once it finds a % it enters one of the corresponding writer functions depending on whether it matches `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%`. If it finds none it just prints the charaters within the string.
+It writes until the next `%` or `\0`. Once it finds a % it enters one of the corresponding writer functions depending on whether it matches `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%`. If it finds none it just prints the characters within the string and returns the total length of bytes printed.
 
 ## My Approach
 
