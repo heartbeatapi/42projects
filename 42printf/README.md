@@ -22,6 +22,17 @@ It includes the following conversions:
 
 It writes until the next `%` or `\0`. Once it finds a % it enters one of the corresponding writer functions depending on whether it matches `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%`. If it finds none it just prints the charaters within the string.
 
+## My Approach
+
+- Started with creating the Makefile as this is the simplest step.
+- Wrote the first format checks and tested along the way.
+- Once the general foundation was stable and running, moved on to edgecase testing and norminetting.
+
+## Challenges and Lessons Learned
+
+- Learned how to use Variadic Lists in order to dynamically iterate through arguments within a string.
+- Asked peers for help when I got stuck and used AI as a supplementary learning resource when I couldn't find answers elsewhere.
+
 ## Instructions
 
 To use the library use `make`. `make clean` removes old object and dependency files. `make fclean` removes all object, dependency and the library files.
