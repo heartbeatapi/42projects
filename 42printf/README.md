@@ -1,3 +1,5 @@
+# ft_printf
+
 *This project has been created as part of the 42 core curriculum by davatanz*
 
 ## Description
@@ -16,9 +18,9 @@ It includes the following conversions:
 `%X` prints a number in hexadecimal (base 16) uppercase format.
 `%%` prints a percent sign.
 
-## Algorithm
+**Algorithm**
 
-It writes until the next '%' or '\0'. Once it finds a % it enters one of the corresponding writer functions depending on whether it matches `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%`. If it finds none it just prints the charaters within the string.
+It writes until the next `%` or `\0`. Once it finds a % it enters one of the corresponding writer functions depending on whether it matches `c`, `s`, `p`, `d`, `i`, `u`, `x`, `X` or `%`. If it finds none it just prints the charaters within the string.
 
 ## Instructions
 
@@ -33,3 +35,11 @@ Then use the created executable:
 ```./a.out```
 
 ## Resources
+
+**Medium:** Used to read up on the theory part of printf.
+
+**GeeksforGeeks** Used to learn about Variadic Functions and to get a greater understanding of va_list and its syntax.
+
+**AI usage:**
+
+AI tools were used as learning resources to clarify the concept behind variadic functions. It was also used as a helper tool for bug fixing.
