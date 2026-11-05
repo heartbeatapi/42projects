@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 11:54:45 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/03 11:58:59 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/05 13:15:04 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_hexu(unsigned int num, const char *base)
 int	ft_puthexupper(va_list arg)
 {
 	unsigned int	num;
-	
+
 	num = (unsigned int)va_arg(arg, unsigned int);
 	return (ft_hexu(num, "0123465789ABCDEF"));
 }

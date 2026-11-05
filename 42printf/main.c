@@ -40,9 +40,9 @@ int	main()
 	printf("\ntotal chars: %d\n\n",
 		ft_printf("%p", add2));
 	printf("\nlibc printf putadd & total chars: %d\n\n",
-		printf("%p", add1));
+		printf("%p", NULL));
 	printf("\nlibc printf putadd & total chars: %d\n\n",
-		printf("%p", add2));
+		printf("%p", NULL));
 
 	printf("\n=====PUTNBR TESTS=====\n\n");
 	printf("\ntotal chars: %d\n\n",

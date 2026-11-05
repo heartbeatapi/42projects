@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printunsign.c                                   :+:      :+:    :+:   */
+/*   ft_putunsign.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 11:15:42 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/03 11:25:32 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/05 13:14:38 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_putunbr(unsigned int num)
 int	ft_putunsign(va_list arg)
 {
 	unsigned int	num;
-	
+
 	num = (unsigned int)va_arg(arg, unsigned int);
 	return (ft_putunbr(num));
 }

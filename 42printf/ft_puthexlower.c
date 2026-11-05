@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 11:33:52 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/03 11:41:45 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/05 13:17:47 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ long long	ft_baselenl(const char *base)
 	long long	i;
 
 	i = 0;
-	while(base[i] != '\0')
+	while (base[i] != '\0')
 		i++;
 	return (i);
 }

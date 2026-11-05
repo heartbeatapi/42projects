@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 17:43:28 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 19:58:07 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/05 14:13:54 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@ int	ft_putadd(va_list arg)
 	long long			temp;
 
 	add = (uintptr_t)va_arg(arg, void *);
+	if (add == 0)
+	{
+		if (write(1, "(nil)", 5) == -1)
+			return (-1);
+		return (5);
+	}
 	if (write(1, "0x", 2) == -1)
 		return (-1);
 	temp = ft_tohex(add, "0123456789abcdef");
