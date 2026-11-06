@@ -112,6 +112,6 @@ int	main()
 	printf("\ntotal chars: %d\n\n",
 		ft_printf("%%%"));
 	printf("\ntotal chars: %d\n\n",
-		ft_printf(NULL));
+		ft_printf("%"));
 	return (0);
 }
