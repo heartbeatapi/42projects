@@ -104,8 +104,14 @@ int	main()
 	printf("\nlibc printf putpercent & total chars: %d\n\n",
 		printf("%%%%%%"));
 
-	printf("\n=====TRAILING %% TEST=====\n\n");
+	printf("\n=====FORMAT SPECIFIER TESTs=====\n\n");
 	printf("\ntotal chars: %d\n\n", 
 		ft_printf("Hello %"));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%%s"));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%%%"));
+	printf("\ntotal chars: %d\n\n",
+		ft_printf("%"));
 	return (0);
 }
