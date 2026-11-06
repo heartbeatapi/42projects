@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/04 11:58:33 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/06 12:32:06 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,10 +207,12 @@ int	ft_printf(const char *s, ...)
 	long long	temp;
 	va_list		arg;
 
+	if (s == NULL)
+		return (-1);
 	va_start(arg, s);
-	i = 0;
+	i = -1;
 	count = 0;
-	while (s[i] != '\0')
+	while (s[++i] != '\0')
 	{
 		if (s[i] == '%')
 		{
@@ -223,10 +225,8 @@ int	ft_printf(const char *s, ...)
 			return (ft_tempcheck(arg));
 		else
 			count++;
-		i++;
 	}
-	va_end(arg);
-	return (count);
+	return (va_end(arg), count);
 }
 
 /*#include <stdio.h>
