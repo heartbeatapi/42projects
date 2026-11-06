@@ -103,5 +103,9 @@ int	main()
 		ft_printf("%%%%%%"));
 	printf("\nlibc printf putpercent & total chars: %d\n\n",
 		printf("%%%%%%"));
+
+	printf("\n=====TRAILING %% TEST=====\n\n");
+	printf("\ntotal chars: %d\n\n", 
+		ft_printf("Hello %"));
 	return (0);
 }

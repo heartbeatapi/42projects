@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:58:05 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/04 12:00:04 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/06 10:47:43 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 int	ft_format_specifier(const char *s, va_list arg, long long i)
 {
+	if (s[i] == '\0')
+		return (-1);
 	if (s[i] == 'c')
 		return (ft_putchar(arg));
 	if (s[i] == 's')
