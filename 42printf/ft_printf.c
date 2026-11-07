@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 14:19:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/06 12:32:06 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/07 14:24:12 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,12 +193,6 @@ int	ft_format_specifier(const char *s, va_list arg, size_t i)
 #include "ft_printf.h"
 #include <unistd.h>
 
-int	ft_tempcheck(va_list arg)
-{
-	va_end(arg);
-	return (-1);
-}
-
 //FINDING FORMAT SPECIFIER, OTHERWISE PRINT IMMUTABLE STRING:
 int	ft_printf(const char *s, ...)
 {
@@ -218,11 +212,11 @@ int	ft_printf(const char *s, ...)
 		{
 			temp = ft_format_specifier(s, arg, ++i);
 			if (temp == -1)
-				return (ft_tempcheck(arg));
+				return (va_end(arg), -1);
 			count += temp;
 		}
 		else if (write(1, &s[i], 1) == -1)
-			return (ft_tempcheck(arg));
+			return (va_end(arg), -1);
 		else
 			count++;
 	}

@@ -6,18 +6,18 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 19:03:31 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/01 21:57:41 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/07 16:13:51 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <unistd.h>
-#include <limits.h>
 
 int	ft_print(long long num)
 {
 	long long	lnum;
 	long long	count;
+	long long	temp;
 
 	lnum = num;
 	count = 0;
@@ -29,7 +29,12 @@ int	ft_print(long long num)
 		count++;
 	}
 	if (lnum >= 10)
-		count += ft_print(lnum / 10);
+	{
+		temp = ft_print(lnum / 10);
+		if (temp == -1)
+			return (-1);
+		count += temp;
+	}
 	if (write(1, &"0123456789"[lnum % 10], 1) == -1)
 		return (-1);
 	count++;

@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 17:43:28 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/05 14:13:54 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/07 14:25:14 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,16 @@ int	ft_tohex(unsigned long long num, char *base)
 {
 	unsigned long long	len;
 	long long			count;
+	long long			temp;
 
 	count = 0;
 	len = ft_baselen(base);
 	if (num >= len)
 	{
-		count += ft_tohex(num / len, base);
+		temp = ft_tohex(num / len, base);
+		if (temp == -1)
+			return (-1);
+		count += temp;
 	}
 	if (write(1, &base[num % len], 1) == -1)
 		return (-1);

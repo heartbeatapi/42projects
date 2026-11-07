@@ -16,7 +16,7 @@ DEPFLAG = -MMD -MP
 
 -include ${DEP}
 
-.PHONY = clean fclean re all
+.PHONY: clean fclean re all
 
 all: ${NAME}
 
