@@ -6,7 +6,15 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 13:22:10 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/08 13:22:11 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/08 14:07:18 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+#include <unistd.h>
+
+char	*get_next_line(int fd)
+{
+	if (fd < 0)
+		return (NULL);
+}
