@@ -45,9 +45,9 @@ Then use the created executable:
 
 ## Resources
 
-**Medium:** Used to read up on the theory part of printf.
+[**Medium:**](medium.com) Used to read up on the theory part of printf.
 
-**GeeksforGeeks** Used to learn about Variadic Functions and to get a greater understanding of va_list and its syntax.
+[**GeeksforGeeks**](geeksforgeeks.org) Used to learn about Variadic Functions and to get a greater understanding of va_list and its syntax.
 
 **AI usage:**
 
