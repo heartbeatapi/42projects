@@ -6,7 +6,7 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 13:22:10 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/08 14:07:18 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/10 14:59:08 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 char	*get_next_line(int fd)
 {
-	if (fd < 0)
+	static char	*buffer;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 }
