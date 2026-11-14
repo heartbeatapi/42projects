@@ -6,12 +6,16 @@
 /*   By: davatanz <davatanz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 13:22:06 by davatanz          #+#    #+#             */
-/*   Updated: 2026/11/10 14:46:49 by davatanz         ###   ########.fr       */
+/*   Updated: 2026/11/14 14:06:29 by davatanz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 1
+# endif
 
 char	*get_next_line(int fd);
 
